@@ -74,7 +74,7 @@ $$
 
 ### Inverse kinematics: `compute_IK_solutions.m`
 
-The six-link chain reaching a 2D hand target is **kinematically redundant** — many joint configurations satisfy the same target. The solver builds a forward-kinematics model of the fingertip and uses MATLAB's `fsolve` to drive it to the target $(x,y) = (0.2,\,0.1)\ \text{m}$.
+The six-link chain reaching a 2D hand target is **kinematically redundant**. This means many joint configurations satisfy the same target. The solver builds a forward-kinematics model of the fingertip and uses MATLAB's `fsolve` to drive it to the target $(x,y) = (0.2,\,0.1)\ \text{m}$.
 
 To sample a realistic *family* of solutions rather than one arbitrary pose, it seeds the solver with **20 initial guesses linearly interpolated between two reference postures**. These include a deep squat (bent knee, bent elbow) and a near-upright stance (locked knee, straight arm):
 
@@ -123,9 +123,9 @@ A **stability test** checks whether the whole-body COM lies over the base of sup
 |---|---|---|
 | ![Spinal force](results/spinal_force_vs_knee_angle.png) | ![Shear force](results/shear_force.png) | ![Stability force](results/stability_force.png) |
 
-**Spinal muscle force.** Compression dominates and scales with the trunk's moment arm about the hip. In the stooped, straight-leg postures the spine carries **> 6000 N**; in a deep squat it drops to **~2500 N** — the quantitative explanation for "lift with your legs." (The peak actually occurs slightly off the fully-locked posture, near a 40° knee angle, before falling as the knees bend further.)
+**Spinal muscle force.** Compression dominates and scales with the trunk's moment arm about the hip. In the stooped, straight-leg postures the spine carries **> 7000 N**; in a deep squat it drops to **~3500 N**. This is the quantitative explanation for "lift with your legs." (The peak actually occurs slightly off the fully-locked posture, near a 40° knee angle, before falling as the knees bend further.)
 
-**Shear force** stays small (≈ 6–14 N) across all postures, confirming the hip load is almost purely axial along the spine.
+**Shear force** stays comparitivly small across all postures, confirming the hip load is almost purely axial along the spine.
 
 **Stability force** mirrors the spinal-compression trend, trending toward zero as the knees bend and the load is brought closer to the body.
 
