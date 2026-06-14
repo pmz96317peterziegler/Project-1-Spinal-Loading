@@ -182,3 +182,5 @@ final_analysis   % runs IK + statics, prints a stability verdict per posture,
 ## Authors
 
 Group project: Nick Linkowski, Ben Brown, Peter Ziegler, Aidan Jones, Brady Stein, Bara Mbaye.
+
+*P.S. — I primarily handled the original math and added the inverse-kinematics functionality to the project, which allowed for smoother, clearer graphs.*
