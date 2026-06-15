@@ -1,4 +1,4 @@
-# Spinal & Hip Loading Over Lifting Positions
+# Spinal Loading Over Lifting Positions
 
 A 2D quasi-static biomechanical model that estimates the **erector-spinae (spinal) muscle force** and **hip joint reaction force** required to hold a load across a continuum of lifting postures. The body is modeled as a six-link planar chain; **inverse kinematics** generates the postures and a **static-equilibrium** analysis solves the internal loads at each one. The motivation is occupational: quantifying *why* "lift with your legs" reduces lower-back load.
 
